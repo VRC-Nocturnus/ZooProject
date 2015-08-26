@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F773ABC9-4C47-4A61-8E06-30B52639E8BF</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ZooProject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>79627E0787FAF833CE9EA30FCA28E843F8ED034E</key>
 		<string>https://github.com/VRC-Nocturnus/ZooProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ZooProject/ZooProject.xcodeproj/project.xcworkspace</string>
+	<string>ZooProject/ZooProject.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>79627E0787FAF833CE9EA30FCA28E843F8ED034E</key>
