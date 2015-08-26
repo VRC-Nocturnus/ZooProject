@@ -1,18 +1,19 @@
 //
-//  TreatmentScene.swift
+//  EnclousureScene.swift
 //  ZooProject
 //
-//  Created by Bira on 25/08/15.
+//  Created by Bira on 26/08/15.
 //  Copyright (c) 2015 Kalim. All rights reserved.
 //
 
 import SpriteKit
 import AVFoundation
 
-class TreatmentScene: SKScene {
+class EnclousureScene: SKScene {
     
     var back: SKSpriteNode = SKSpriteNode()
-    //    var feedingGame: SKSpriteNode = SKSpriteNode()
+    var feedingGame: SKSpriteNode = SKSpriteNode()
+    var trainingGame: SKSpriteNode = SKSpriteNode()
     
     
     
@@ -36,7 +37,8 @@ class TreatmentScene: SKScene {
         super.didMoveToView(view)
         
         back = childNodeWithName("back") as! SKSpriteNode
-        //        feedingGame = childNodeWithName("foodGame") as! SKSpriteNode
+        feedingGame = childNodeWithName("feedingGame") as! SKSpriteNode
+        trainingGame = childNodeWithName("trainingGame") as! SKSpriteNode
         
         
         
@@ -68,7 +70,7 @@ class TreatmentScene: SKScene {
         //        }else{
         //            soundOn.alpha = 0
         //        }
-        
+
         
     }
     
@@ -79,15 +81,19 @@ class TreatmentScene: SKScene {
         
         
         if back.containsPoint(touchLocation){
-            var medicalAreaScene = MedicalAreaScene.unarchiveFromFile("MedicalAreaScene") as! MedicalAreaScene
-            view!.presentScene(medicalAreaScene)
+            var zooMapScene = ZooMapScene.unarchiveFromFile("ZooMapScene") as! ZooMapScene
+            view!.presentScene(zooMapScene)
         }
         
-        //        if feedingGame.containsPoint(touchLocation){
-        //            var feedingGameScene = FeedingGameScene.unarchiveFromFile("FeedingGameScene") as! FeedingGameScene
-        //            view!.presentScene(feedingGameScene)
-        //        }
+        if feedingGame.containsPoint(touchLocation){
+            var feedingGameScene = FeedingGameScene.unarchiveFromFile("FeedingGameScene") as! FeedingGameScene
+            view!.presentScene(feedingGameScene)
+        }
         
+        if trainingGame.containsPoint(touchLocation){
+            var trainingGameScene = TrainingGameScene.unarchiveFromFile("TrainingGameScene") as! TrainingGameScene
+            view!.presentScene(trainingGameScene)
+        }
         
         
         

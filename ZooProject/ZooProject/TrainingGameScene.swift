@@ -1,15 +1,15 @@
 //
-//  TreatmentScene.swift
+//  TrainingGameScene.swift
 //  ZooProject
 //
-//  Created by Bira on 25/08/15.
+//  Created by Bira on 26/08/15.
 //  Copyright (c) 2015 Kalim. All rights reserved.
 //
 
 import SpriteKit
 import AVFoundation
 
-class TreatmentScene: SKScene {
+class TrainingGameScene: SKScene {
     
     var back: SKSpriteNode = SKSpriteNode()
     //    var feedingGame: SKSpriteNode = SKSpriteNode()
@@ -79,8 +79,8 @@ class TreatmentScene: SKScene {
         
         
         if back.containsPoint(touchLocation){
-            var medicalAreaScene = MedicalAreaScene.unarchiveFromFile("MedicalAreaScene") as! MedicalAreaScene
-            view!.presentScene(medicalAreaScene)
+            var enclousureScene = EnclousureScene.unarchiveFromFile("EnclousureScene") as! EnclousureScene
+            view!.presentScene(enclousureScene)
         }
         
         //        if feedingGame.containsPoint(touchLocation){

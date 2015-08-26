@@ -12,6 +12,7 @@ import AVFoundation
 class MedicalAreaScene: SKScene {
     
     var back: SKSpriteNode = SKSpriteNode()
+    var treatmentScene: SKSpriteNode = SKSpriteNode()
     
     
     
@@ -35,6 +36,7 @@ class MedicalAreaScene: SKScene {
         super.didMoveToView(view)
         
         back = childNodeWithName("back") as! SKSpriteNode
+        treatmentScene = childNodeWithName("treatmentScene") as! SKSpriteNode
         
         
         
@@ -85,6 +87,11 @@ class MedicalAreaScene: SKScene {
         if back.containsPoint(touchLocation){
             var zooMapScene = ZooMapScene.unarchiveFromFile("ZooMapScene") as! ZooMapScene
             view!.presentScene(zooMapScene)
+        }
+        
+        if treatmentScene.containsPoint(touchLocation){
+            var treatment = TreatmentScene.unarchiveFromFile("TreatmentScene") as! TreatmentScene
+            view!.presentScene(treatment)
         }
         
         

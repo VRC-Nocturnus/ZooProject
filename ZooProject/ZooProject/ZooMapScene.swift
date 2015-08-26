@@ -12,9 +12,12 @@ import AVFoundation
 
 class ZooMapScene: SKScene {
     
+//    var scaleScene = SKSceneScaleMode.AspectFill
+    
     var back: SKSpriteNode = SKSpriteNode()
     var shop: SKSpriteNode = SKSpriteNode()
     var medicalArea: SKSpriteNode = SKSpriteNode()
+    var enclousureBirds: SKSpriteNode = SKSpriteNode()
     
     
     
@@ -38,9 +41,12 @@ class ZooMapScene: SKScene {
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         
+//        view.scene?.scaleMode = scaleScene
+        
         back = childNodeWithName("back") as! SKSpriteNode
         shop = childNodeWithName("shop") as! SKSpriteNode
         medicalArea = childNodeWithName("medicalArea") as! SKSpriteNode
+        enclousureBirds = childNodeWithName("enclousureBirds") as! SKSpriteNode
         
         
         
@@ -86,7 +92,7 @@ class ZooMapScene: SKScene {
         
         var touch = touches.first as! UITouch
         var touchLocation = touch.locationInNode(self)
-        
+
         
         if back.containsPoint(touchLocation){
             var menuScene = MenuScene.unarchiveFromFile("MenuScene") as! MenuScene
@@ -101,6 +107,11 @@ class ZooMapScene: SKScene {
         if medicalArea.containsPoint(touchLocation){
             var medicalArea = MedicalAreaScene.unarchiveFromFile("MedicalAreaScene") as! MedicalAreaScene
             view!.presentScene(medicalArea)
+        }
+        
+        if enclousureBirds.containsPoint(touchLocation){
+            var enclousureScene = EnclousureScene.unarchiveFromFile("EnclousureScene") as! EnclousureScene
+            view!.presentScene(enclousureScene)
         }
         
         

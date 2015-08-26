@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		445E29821B8E554200DA4FD7 /* FeedingGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 445E29811B8E554200DA4FD7 /* FeedingGameScene.sks */; };
+		445E29841B8E560C00DA4FD7 /* FeedingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445E29831B8E560C00DA4FD7 /* FeedingGameScene.swift */; };
+		445E29861B8E565500DA4FD7 /* TrainingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445E29851B8E565500DA4FD7 /* TrainingGameScene.swift */; };
+		445E29881B8E566300DA4FD7 /* TrainingGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 445E29871B8E566300DA4FD7 /* TrainingGameScene.sks */; };
+		445E298B1B8E5BF500DA4FD7 /* backgroundFeedingGame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445E29891B8E5BF500DA4FD7 /* backgroundFeedingGame.jpg */; };
+		445E298C1B8E5BF500DA4FD7 /* backgroundTrainingGame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445E298A1B8E5BF500DA4FD7 /* backgroundTrainingGame.jpg */; };
+		445E29921B8E5E7F00DA4FD7 /* feedingGame.png in Resources */ = {isa = PBXBuildFile; fileRef = 445E29911B8E5E7F00DA4FD7 /* feedingGame.png */; };
+		445E29941B8E5EFA00DA4FD7 /* trainingGame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445E29931B8E5EFA00DA4FD7 /* trainingGame.jpg */; };
+		445E29961B8E6CFD00DA4FD7 /* treatmentScene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445E29951B8E6CFD00DA4FD7 /* treatmentScene.jpg */; };
+		445E29981B8E6FEE00DA4FD7 /* backgroundTreatment.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445E29971B8E6FEE00DA4FD7 /* backgroundTreatment.jpg */; };
 		44F7E0661B8E2E9000CD4C08 /* ShopScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E05F1B8E2E9000CD4C08 /* ShopScene.sks */; };
 		44F7E0671B8E2E9000CD4C08 /* ShopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F7E0601B8E2E9000CD4C08 /* ShopScene.swift */; };
 		44F7E0691B8E2E9000CD4C08 /* TreatmentScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E0621B8E2E9000CD4C08 /* TreatmentScene.sks */; };
@@ -29,6 +39,10 @@
 		44F7E0981B8E2FFA00CD4C08 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E08F1B8E2FFA00CD4C08 /* play.png */; };
 		44F7E09B1B8E333A00CD4C08 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E0991B8E333A00CD4C08 /* MenuScene.sks */; };
 		44F7E09C1B8E333A00CD4C08 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F7E09A1B8E333A00CD4C08 /* MenuScene.swift */; };
+		44F7E09E1B8E3C2900CD4C08 /* EnclousureScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F7E09D1B8E3C2900CD4C08 /* EnclousureScene.swift */; };
+		44F7E0A01B8E3C6500CD4C08 /* EnclousureScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E09F1B8E3C6500CD4C08 /* EnclousureScene.sks */; };
+		44F7E0A21B8E42F300CD4C08 /* backgroundEnclousure.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E0A11B8E42F300CD4C08 /* backgroundEnclousure.jpg */; };
+		44F7E0A41B8E45EC00CD4C08 /* enclousureBirds.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E0A31B8E45EC00CD4C08 /* enclousureBirds.jpg */; };
 		E24C716A1B850372004A77EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C71691B850372004A77EA /* AppDelegate.swift */; };
 		E24C71731B850372004A77EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24C71711B850372004A77EA /* Main.storyboard */; };
 		E24C71751B850372004A77EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24C71741B850372004A77EA /* Images.xcassets */; };
@@ -47,6 +61,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		445E29811B8E554200DA4FD7 /* FeedingGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FeedingGameScene.sks; sourceTree = "<group>"; };
+		445E29831B8E560C00DA4FD7 /* FeedingGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingGameScene.swift; sourceTree = "<group>"; };
+		445E29851B8E565500DA4FD7 /* TrainingGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingGameScene.swift; sourceTree = "<group>"; };
+		445E29871B8E566300DA4FD7 /* TrainingGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TrainingGameScene.sks; sourceTree = "<group>"; };
+		445E29891B8E5BF500DA4FD7 /* backgroundFeedingGame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFeedingGame.jpg; sourceTree = "<group>"; };
+		445E298A1B8E5BF500DA4FD7 /* backgroundTrainingGame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTrainingGame.jpg; sourceTree = "<group>"; };
+		445E29911B8E5E7F00DA4FD7 /* feedingGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedingGame.png; sourceTree = "<group>"; };
+		445E29931B8E5EFA00DA4FD7 /* trainingGame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trainingGame.jpg; sourceTree = "<group>"; };
+		445E29951B8E6CFD00DA4FD7 /* treatmentScene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = treatmentScene.jpg; sourceTree = "<group>"; };
+		445E29971B8E6FEE00DA4FD7 /* backgroundTreatment.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTreatment.jpg; sourceTree = "<group>"; };
 		44F7E05F1B8E2E9000CD4C08 /* ShopScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShopScene.sks; sourceTree = "<group>"; };
 		44F7E0601B8E2E9000CD4C08 /* ShopScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopScene.swift; sourceTree = "<group>"; };
 		44F7E0621B8E2E9000CD4C08 /* TreatmentScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TreatmentScene.sks; sourceTree = "<group>"; };
@@ -69,6 +93,10 @@
 		44F7E08F1B8E2FFA00CD4C08 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		44F7E0991B8E333A00CD4C08 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		44F7E09A1B8E333A00CD4C08 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		44F7E09D1B8E3C2900CD4C08 /* EnclousureScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnclousureScene.swift; sourceTree = "<group>"; };
+		44F7E09F1B8E3C6500CD4C08 /* EnclousureScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EnclousureScene.sks; sourceTree = "<group>"; };
+		44F7E0A11B8E42F300CD4C08 /* backgroundEnclousure.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundEnclousure.jpg; sourceTree = "<group>"; };
+		44F7E0A31B8E45EC00CD4C08 /* enclousureBirds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = enclousureBirds.jpg; sourceTree = "<group>"; };
 		E24C71641B850372004A77EA /* ZooProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24C71681B850372004A77EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24C71691B850372004A77EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,15 +137,23 @@
 		44F7E0861B8E2FC900CD4C08 /* PlaceHolder */ = {
 			isa = PBXGroup;
 			children = (
+				44F7E08D1B8E2FFA00CD4C08 /* back.png */,
+				44F7E0A11B8E42F300CD4C08 /* backgroundEnclousure.jpg */,
+				445E29891B8E5BF500DA4FD7 /* backgroundFeedingGame.jpg */,
 				44F7E0871B8E2FFA00CD4C08 /* backgroundMedicalArea.jpg */,
 				44F7E0881B8E2FFA00CD4C08 /* backgroundMenu.jpg */,
 				44F7E0891B8E2FFA00CD4C08 /* backgroundShop.jpg */,
-				44F7E08A1B8E2FFA00CD4C08 /* medicalArea.jpeg */,
-				44F7E08B1B8E2FFA00CD4C08 /* medicalArea.jpg */,
-				44F7E08C1B8E2FFA00CD4C08 /* shop.jpg */,
-				44F7E08D1B8E2FFA00CD4C08 /* back.png */,
+				445E298A1B8E5BF500DA4FD7 /* backgroundTrainingGame.jpg */,
 				44F7E08E1B8E2FFA00CD4C08 /* backgroundZoo.png */,
+				44F7E0A31B8E45EC00CD4C08 /* enclousureBirds.jpg */,
+				445E29911B8E5E7F00DA4FD7 /* feedingGame.png */,
+				44F7E08A1B8E2FFA00CD4C08 /* medicalArea.jpeg */,
+				445E29971B8E6FEE00DA4FD7 /* backgroundTreatment.jpg */,
+				44F7E08B1B8E2FFA00CD4C08 /* medicalArea.jpg */,
 				44F7E08F1B8E2FFA00CD4C08 /* play.png */,
+				44F7E08C1B8E2FFA00CD4C08 /* shop.jpg */,
+				445E29931B8E5EFA00DA4FD7 /* trainingGame.jpg */,
+				445E29951B8E6CFD00DA4FD7 /* treatmentScene.jpg */,
 			);
 			name = PlaceHolder;
 			sourceTree = "<group>";
@@ -156,6 +192,12 @@
 				44F7E0701B8E2EB900CD4C08 /* MedicalAreaScene.swift */,
 				44F7E0621B8E2E9000CD4C08 /* TreatmentScene.sks */,
 				44F7E0631B8E2E9000CD4C08 /* TreatmentScene.swift */,
+				44F7E09F1B8E3C6500CD4C08 /* EnclousureScene.sks */,
+				44F7E09D1B8E3C2900CD4C08 /* EnclousureScene.swift */,
+				445E29811B8E554200DA4FD7 /* FeedingGameScene.sks */,
+				445E29831B8E560C00DA4FD7 /* FeedingGameScene.swift */,
+				445E29871B8E566300DA4FD7 /* TrainingGameScene.sks */,
+				445E29851B8E565500DA4FD7 /* TrainingGameScene.swift */,
 				44F7E0811B8E2F6B00CD4C08 /* AlbumScene.sks */,
 				44F7E0821B8E2F6B00CD4C08 /* AlbumScene.swift */,
 				E24C71711B850372004A77EA /* Main.storyboard */,
@@ -272,19 +314,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24C71781B850372004A77EA /* LaunchScreen.xib in Resources */,
+				445E29921B8E5E7F00DA4FD7 /* feedingGame.png in Resources */,
+				445E29881B8E566300DA4FD7 /* TrainingGameScene.sks in Resources */,
 				44F7E0981B8E2FFA00CD4C08 /* play.png in Resources */,
 				E24C71751B850372004A77EA /* Images.xcassets in Resources */,
 				44F7E0961B8E2FFA00CD4C08 /* back.png in Resources */,
+				44F7E0A21B8E42F300CD4C08 /* backgroundEnclousure.jpg in Resources */,
+				44F7E0A01B8E3C6500CD4C08 /* EnclousureScene.sks in Resources */,
 				44F7E0831B8E2F6B00CD4C08 /* AlbumScene.sks in Resources */,
+				445E298C1B8E5BF500DA4FD7 /* backgroundTrainingGame.jpg in Resources */,
+				445E29821B8E554200DA4FD7 /* FeedingGameScene.sks in Resources */,
 				44F7E0901B8E2FFA00CD4C08 /* backgroundMedicalArea.jpg in Resources */,
 				44F7E0661B8E2E9000CD4C08 /* ShopScene.sks in Resources */,
 				44F7E09B1B8E333A00CD4C08 /* MenuScene.sks in Resources */,
+				445E298B1B8E5BF500DA4FD7 /* backgroundFeedingGame.jpg in Resources */,
 				44F7E0951B8E2FFA00CD4C08 /* shop.jpg in Resources */,
+				445E29941B8E5EFA00DA4FD7 /* trainingGame.jpg in Resources */,
 				44F7E0941B8E2FFA00CD4C08 /* medicalArea.jpg in Resources */,
 				E24C71731B850372004A77EA /* Main.storyboard in Resources */,
 				44F7E0931B8E2FFA00CD4C08 /* medicalArea.jpeg in Resources */,
 				44F7E0911B8E2FFA00CD4C08 /* backgroundMenu.jpg in Resources */,
 				44F7E06B1B8E2E9000CD4C08 /* ZooMapScene.sks in Resources */,
+				44F7E0A41B8E45EC00CD4C08 /* enclousureBirds.jpg in Resources */,
+				445E29961B8E6CFD00DA4FD7 /* treatmentScene.jpg in Resources */,
+				445E29981B8E6FEE00DA4FD7 /* backgroundTreatment.jpg in Resources */,
 				44F7E0761B8E2EB900CD4C08 /* MedicalAreaScene.sks in Resources */,
 				44F7E0971B8E2FFA00CD4C08 /* backgroundZoo.png in Resources */,
 				44F7E0691B8E2E9000CD4C08 /* TreatmentScene.sks in Resources */,
@@ -307,10 +360,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F7E0841B8E2F6B00CD4C08 /* AlbumScene.swift in Sources */,
+				445E29841B8E560C00DA4FD7 /* FeedingGameScene.swift in Sources */,
 				44F7E0801B8E2F3200CD4C08 /* GameViewController.swift in Sources */,
+				44F7E09E1B8E3C2900CD4C08 /* EnclousureScene.swift in Sources */,
 				44F7E0771B8E2EB900CD4C08 /* MedicalAreaScene.swift in Sources */,
 				44F7E09C1B8E333A00CD4C08 /* MenuScene.swift in Sources */,
 				44F7E06A1B8E2E9000CD4C08 /* TreatmentScene.swift in Sources */,
+				445E29861B8E565500DA4FD7 /* TrainingGameScene.swift in Sources */,
 				44F7E0671B8E2E9000CD4C08 /* ShopScene.swift in Sources */,
 				E24C716A1B850372004A77EA /* AppDelegate.swift in Sources */,
 				44F7E06C1B8E2E9000CD4C08 /* ZooMapScene.swift in Sources */,
