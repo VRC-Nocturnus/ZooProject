@@ -17,7 +17,7 @@ class MenuScene: SKScene {
     
     
     //ARMAZENA AS TEXTURAS/FRAMES DAS ANIMACOES
-    var note1Animation: [SKTexture] = [SKTexture]()
+//    var note1Animation: [SKTexture] = [SKTexture]()
     
     
     
@@ -273,17 +273,17 @@ class MenuScene: SKScene {
     }
     
     //PREPARA AS IMAGENS DO PACOTE ATLAS
-    func prepareFrames(atlas: SKTextureAtlas){
-        for (var i = 0; i < atlas.textureNames.count; i++){
-            var textureName = NSString(format: "Nota%d", i)
-            var textureTemp = atlas.textureNamed(textureName as String)
-            note1Animation.append(textureTemp)
-        }
-    }
-    
-    //EXECUTA A ANIMACAO
-    func activeAnimation(node: SKSpriteNode, animation: [SKTexture], key: String){
-        node.runAction(SKAction.repeatActionForever(SKAction.animateWithTextures(animation, timePerFrame: 0.1, resize: false, restore: true)), withKey: key)
-    }
+//    func prepareFrames(atlas: SKTextureAtlas){
+//        for (var i = 0; i < atlas.textureNames.count; i++){
+//            var textureName = NSString(format: "Nota%d", i)
+//            var textureTemp = atlas.textureNamed(textureName as String)
+//            note1Animation.append(textureTemp)
+//        }
+//    }
+//    
+//    //EXECUTA A ANIMACAO
+//    func activeAnimation(node: SKSpriteNode, animation: [SKTexture], key: String){
+//        node.runAction(SKAction.repeatActionForever(SKAction.animateWithTextures(animation, timePerFrame: 0.1, resize: false, restore: true)), withKey: key)
+//    }
     
 }
