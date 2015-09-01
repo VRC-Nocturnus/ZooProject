@@ -48,6 +48,10 @@
 		E24C71751B850372004A77EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24C71741B850372004A77EA /* Images.xcassets */; };
 		E24C71781B850372004A77EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24C71761B850372004A77EA /* LaunchScreen.xib */; };
 		E24C71841B850372004A77EA /* ZooProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C71831B850372004A77EA /* ZooProjectTests.swift */; };
+		EE3BD5E41B961FAF00C7F458 /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE3BD5E31B961FAF00C7F458 /* home.jpg */; };
+		EE3BD5E81B9620B700C7F458 /* pauseAtivo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE3BD5E71B9620B700C7F458 /* pauseAtivo.jpg */; };
+		EE3BD5EA1B9643FA00C7F458 /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3BD5E91B9643FA00C7F458 /* tutorial.png */; };
+		EE4BE5601B95DDB200F24B00 /* Pause.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE4BE55F1B95DDB200F24B00 /* Pause.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		E24C717D1B850372004A77EA /* ZooProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24C71821B850372004A77EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24C71831B850372004A77EA /* ZooProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooProjectTests.swift; sourceTree = "<group>"; };
+		EE3BD5E31B961FAF00C7F458 /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
+		EE3BD5E71B9620B700C7F458 /* pauseAtivo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pauseAtivo.jpg; sourceTree = "<group>"; };
+		EE3BD5E91B9643FA00C7F458 /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
+		EE4BE55F1B95DDB200F24B00 /* Pause.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pause.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,10 +156,14 @@
 				44F7E0A31B8E45EC00CD4C08 /* enclousureBirds.jpg */,
 				445E29911B8E5E7F00DA4FD7 /* feedingGame.png */,
 				44F7E08A1B8E2FFA00CD4C08 /* medicalArea.jpeg */,
+				EE3BD5E71B9620B700C7F458 /* pauseAtivo.jpg */,
 				445E29971B8E6FEE00DA4FD7 /* backgroundTreatment.jpg */,
 				44F7E08B1B8E2FFA00CD4C08 /* medicalArea.jpg */,
+				EE3BD5E91B9643FA00C7F458 /* tutorial.png */,
 				44F7E08F1B8E2FFA00CD4C08 /* play.png */,
+				EE3BD5E31B961FAF00C7F458 /* home.jpg */,
 				44F7E08C1B8E2FFA00CD4C08 /* shop.jpg */,
+				EE4BE55F1B95DDB200F24B00 /* Pause.jpg */,
 				445E29931B8E5EFA00DA4FD7 /* trainingGame.jpg */,
 				445E29951B8E6CFD00DA4FD7 /* treatmentScene.jpg */,
 			);
@@ -313,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3BD5E41B961FAF00C7F458 /* home.jpg in Resources */,
 				E24C71781B850372004A77EA /* LaunchScreen.xib in Resources */,
 				445E29921B8E5E7F00DA4FD7 /* feedingGame.png in Resources */,
 				445E29881B8E566300DA4FD7 /* TrainingGameScene.sks in Resources */,
@@ -324,6 +337,7 @@
 				44F7E0831B8E2F6B00CD4C08 /* AlbumScene.sks in Resources */,
 				445E298C1B8E5BF500DA4FD7 /* backgroundTrainingGame.jpg in Resources */,
 				445E29821B8E554200DA4FD7 /* FeedingGameScene.sks in Resources */,
+				EE3BD5EA1B9643FA00C7F458 /* tutorial.png in Resources */,
 				44F7E0901B8E2FFA00CD4C08 /* backgroundMedicalArea.jpg in Resources */,
 				44F7E0661B8E2E9000CD4C08 /* ShopScene.sks in Resources */,
 				44F7E09B1B8E333A00CD4C08 /* MenuScene.sks in Resources */,
@@ -337,10 +351,12 @@
 				44F7E06B1B8E2E9000CD4C08 /* ZooMapScene.sks in Resources */,
 				44F7E0A41B8E45EC00CD4C08 /* enclousureBirds.jpg in Resources */,
 				445E29961B8E6CFD00DA4FD7 /* treatmentScene.jpg in Resources */,
+				EE4BE5601B95DDB200F24B00 /* Pause.jpg in Resources */,
 				445E29981B8E6FEE00DA4FD7 /* backgroundTreatment.jpg in Resources */,
 				44F7E0761B8E2EB900CD4C08 /* MedicalAreaScene.sks in Resources */,
 				44F7E0971B8E2FFA00CD4C08 /* backgroundZoo.png in Resources */,
 				44F7E0691B8E2E9000CD4C08 /* TreatmentScene.sks in Resources */,
+				EE3BD5E81B9620B700C7F458 /* pauseAtivo.jpg in Resources */,
 				44F7E0921B8E2FFA00CD4C08 /* backgroundShop.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

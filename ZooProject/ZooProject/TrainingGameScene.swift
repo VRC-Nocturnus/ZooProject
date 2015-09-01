@@ -18,10 +18,15 @@ class TrainingGameScene: SKScene {
     
     
     
-    
+    var pause: SKSpriteNode = SKSpriteNode()
     var musicOn: SKSpriteNode = SKSpriteNode()
     var soundOn: SKSpriteNode = SKSpriteNode()
     var colorBlindOn: SKSpriteNode = SKSpriteNode()
+    
+    
+    var pausePopUp: SKSpriteNode = SKSpriteNode()
+    var pauseButton = false
+   
     
     var soundGame: Bool = Bool()
     var musicGame: Bool = Bool()
@@ -31,11 +36,17 @@ class TrainingGameScene: SKScene {
     let defaults = NSUserDefaults.standardUserDefaults()
     var audioPlayer = AVAudioPlayer()
     
+    var layerBackground: CGFloat = 0.0
+    var layerBeforeBackground: CGFloat = -1
+    var layerAfterBackground: CGFloat = 1
+    
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         
         back = childNodeWithName("back") as! SKSpriteNode
+        pause = childNodeWithName("Pause") as! SKSpriteNode
+        
         //        feedingGame = childNodeWithName("foodGame") as! SKSpriteNode
         
         
@@ -72,16 +83,110 @@ class TrainingGameScene: SKScene {
         
     }
     
+    
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
         var touch = touches.first as! UITouch
         var touchLocation = touch.locationInNode(self)
-        
+        var node = self.nodeAtPoint(touchLocation)
         
         if back.containsPoint(touchLocation){
             var enclousureScene = EnclousureScene.unarchiveFromFile("EnclousureScene") as! EnclousureScene
             view!.presentScene(enclousureScene)
         }
+        
+        //POSICIONA O POPUP PAUSE
+        pausePopUp = SKSpriteNode (imageNamed: "pauseAtivo.jpg")
+        pausePopUp.position.x = 1025
+        pausePopUp.position.y = 665
+        pausePopUp.zPosition = layerAfterBackground
+        addChild(pausePopUp)
+        
+       //FECHA PAUSE
+        if node.name == "continuar" {
+            
+            pausePopUp.zPosition = layerBeforeBackground
+            let dropDownConfirm = SKAction.scaleTo(1.0, duration: 0.2)
+            //confirm.runAction(dropDown, withKey: "drop")
+            node.removeFromParent()
+            return
+      }
+        
+        //IR PARA A HOME
+        if node.name == "home" {
+            
+            pausePopUp.zPosition = layerBeforeBackground
+            let dropDownConfirm = SKAction.scaleTo(1.0, duration: 0.2)
+            //confirm.runAction(dropDown, withKey: "drop")
+            node.removeFromParent()
+            return
+        }
+        
+        //IR PARA TUTORIAL
+        if node.name == "tutorial" {
+            
+            pausePopUp.zPosition = layerBeforeBackground
+            let dropDownConfirm = SKAction.scaleTo(1.0, duration: 0.2)
+            //confirm.runAction(dropDown, withKey: "drop")
+            node.removeFromParent()
+            return
+        }
+        
+        //VERIFICA SE SELECIONOU O PAUSE NO JOGO
+        
+        if pause.containsPoint(touchLocation){
+            
+            if pauseButton {
+                return
+            }else{
+                
+                pauseButton = true
+                pausePopUp.zPosition = layerAfterBackground
+                let liftUp = SKAction.scaleTo(1.2, duration: 0.2)
+                // node.runAction(liftUp, withKey: "pickup")
+                
+                
+                //POSICAO BOTAO CONTINUAR
+                var continuar = SKSpriteNode (imageNamed: "play.png")
+                continuar.position.x = -300 //-290
+                continuar.position.y = -300 // 290
+                continuar.name = "continuar"
+                continuar.setScale(0.75)     //0.75
+                continuar.zPosition = layerAfterBackground+4
+                node.addChild(continuar)
+                
+                
+                //POSICAO BOTAO HOME
+                var home = SKSpriteNode (imageNamed: "home.jpg")
+                home.position.x = -850//-290
+                home.position.y = -350 // 290
+                home.name = "home"
+                home.setScale(0.75)     //0.75
+                home.zPosition = layerAfterBackground+4
+                node.addChild(home)
+                
+                //POSICAO BOTAO TUTORIAL
+                var tutorial = SKSpriteNode (imageNamed: "tutorial.png")
+                tutorial.position.x = -1300 //-290
+                tutorial.position.y = -650 // 290
+                tutorial.name = "tutorial"
+                tutorial.setScale(0.75)     //0.75
+                tutorial.zPosition = layerAfterBackground+4
+                node.addChild(tutorial)
+                
+                
+                
+//                var close = SKSpriteNode (imageNamed: "xRosa")
+//                close.position.x = -205
+//                close.position.y = 75
+//                close.name = "close"
+//                close.setScale(0.75)
+//                close.zPosition = layerAfterBackground+4
+//                node.addChild(close)
+            }
+        }
+        
         
         //        if feedingGame.containsPoint(touchLocation){
         //            var feedingGameScene = FeedingGameScene.unarchiveFromFile("FeedingGameScene") as! FeedingGameScene
