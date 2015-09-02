@@ -168,6 +168,7 @@
 				445E29971B8E6FEE00DA4FD7 /* backgroundTreatment.jpg */,
 				44F7E08B1B8E2FFA00CD4C08 /* medicalArea.jpg */,
 				440F53DF1B90CF3E007C89DC /* tap.png */,
+				EE3BD5E91B9643FA00C7F458 /* tutorial.png */,
 				44F7E08F1B8E2FFA00CD4C08 /* play.png */,
 				EE3BD5E31B961FAF00C7F458 /* home.jpg */,
 				44F7E08C1B8E2FFA00CD4C08 /* shop.jpg */,

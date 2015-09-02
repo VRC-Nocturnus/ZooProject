@@ -43,23 +43,32 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
     var countFishLost = 0;
     
     
+    
     var pause: SKSpriteNode = SKSpriteNode()
-    var musicOn: SKSpriteNode = SKSpriteNode()
-    var soundOn: SKSpriteNode = SKSpriteNode()
-    var colorBlindOn: SKSpriteNode = SKSpriteNode()
-    
-    
     var pausePopUp: SKSpriteNode = SKSpriteNode()
     var pauseButton = false
-   
+    var continuar = SKSpriteNode (imageNamed: "play")
+    var home = SKSpriteNode (imageNamed: "home.jpg")
+    var tutorial = SKSpriteNode (imageNamed: "home.png")
+    var tutor = SKSpriteNode (imageNamed: "tutorial.png")
     
-    var soundGame: Bool = Bool()
-    var musicGame: Bool = Bool()
-    var colorBlind: Bool = Bool()
-    var daltonicoMode: Bool = Bool()
     
-    let defaults = NSUserDefaults.standardUserDefaults()
-    var audioPlayer = AVAudioPlayer()
+    
+//    var musicOn: SKSpriteNode = SKSpriteNode()
+//    var soundOn: SKSpriteNode = SKSpriteNode()
+//    var colorBlindOn: SKSpriteNode = SKSpriteNode()
+//    
+//    
+//    
+//   
+//    
+//    var soundGame: Bool = Bool()
+//    var musicGame: Bool = Bool()
+//    var colorBlind: Bool = Bool()
+//    var daltonicoMode: Bool = Bool()
+//    
+//    let defaults = NSUserDefaults.standardUserDefaults()
+//    var audioPlayer = AVAudioPlayer()
     
     var layerBackground: CGFloat = 0.0
     var layerBeforeBackground: CGFloat = -1
@@ -74,9 +83,12 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
         
         back = childNodeWithName("back") as! SKSpriteNode
         background = childNodeWithName("background") as! SKSpriteNode
+        background = childNodeWithName("background") as! SKSpriteNode
         eaterLeft = childNodeWithName("eaterLeft") as! SKSpriteNode
         eaterRight = childNodeWithName("eaterRight") as! SKSpriteNode
+        pause = childNodeWithName("Pause") as! SKSpriteNode
         
+//        feedingGame = childNodeWithName("foodGame") as! SKSpriteNode
         eaterLeft.physicsBody = SKPhysicsBody (circleOfRadius: eaterLeft.size.height/2)
         eaterLeft.physicsBody?.categoryBitMask = 0
         eaterLeft.physicsBody?.contactTestBitMask = FishCategory
@@ -144,8 +156,49 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
         bottom.physicsBody?.collisionBitMask = BottomCategory
         addChild(bottom)
         
+        //BOTAO DE PAUSE
+        pausePopUp = SKSpriteNode (imageNamed: "pauseAtivo.jpg")
+        pausePopUp.position.x = 1025
+        pausePopUp.position.y = 665
+        pausePopUp.zPosition = layerBeforeBackground
+        addChild(pausePopUp)
+        
+        
+        //POSICAO BOTAO CONTINUAR
+        continuar.position.x = 300 //-290
+        continuar.position.y = 300 // 290
+        continuar.name = "continuar"
+        continuar.setScale(0.75)     //0.75
+        continuar.zPosition = layerBeforeBackground
+        addChild(continuar)
+        
+        
+        //POSICAO BOTAO HOME
+        home.position.x = 850//-290
+        home.position.y = 350 // 290
+        home.name = "home"
+        home.setScale(0.75)     //0.75
+        home.zPosition = layerBeforeBackground
+        addChild(home)
+        
+        
+        //POSICAO BOTAO TUTORIAL
+        tutorial.position.x = 1300 //-290
+        tutorial.position.y = 650 // 290
+        tutorial.name = "tutorial"
+        tutorial.setScale(0.75)     //0.75
+        tutorial.zPosition = layerBeforeBackground
+        addChild(tutorial)
+
+        
+        tutor.position.x = 1300
+        tutor.position.y = 850
+        tutor.zPosition = -1
+        addChild(tutor)
+    
         //ORDEM EM QUE OS ELEMENTOS SÃO ADICIONADOS NA CENA
         addChild(ariranhaNode)
+    
 
         
         //        //        defaults.setBool(true, forKey: "musicLoaded")
@@ -191,43 +244,82 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
             view!.presentScene(enclousureScene)
         }
         
-        if leftTap.containsPoint(touchLocation){
+        //VERIFICA SE SELECIONOU O PAUSE NO JOGO
+        if pause.containsPoint(touchLocation){
+            if pauseButton {
+                println("ESTA PAUSADO")
+                return
+            }else{
+                println("VAI PAUSAR")
+                pauseButton = true;
+                pausePopUp.zPosition = layerAfterBackground+1
+                continuar.zPosition = layerAfterBackground+1
+                home.zPosition = layerAfterBackground+1
+                tutorial.zPosition = layerAfterBackground+1
+                tutor.zPosition = layerAfterBackground+1
+                
+            }
+        }
+        
+        //DEVORADOR ESQUERDO
+        if leftTap.containsPoint(touchLocation) && !pauseButton{
 //            println("leftTap")
             eatLeft = true
             eatRight = false
             //Setar a animacao
-            
+
             eaterLeft.physicsBody?.categoryBitMask = EaterCategory
             eaterRight.physicsBody?.categoryBitMask = 0
             ariranhaNode.texture = ariranhaAnimation[0]
-            
             return
         }
         
-        if rightTap.containsPoint(touchLocation){
+        //DEVORADOR DIREITO
+        if rightTap.containsPoint(touchLocation) && !pauseButton{
 //            println("rightTap")
             eatRight = true
             eatLeft = false
             //Setar a animacao
-            eaterRight.physicsBody?.categoryBitMask = EaterCategory
-            eaterLeft.physicsBody?.categoryBitMask = 0
-
-            ariranhaNode.texture = ariranhaAnimation[2]
             
+            eaterLeft.physicsBody?.categoryBitMask = EaterCategory
+            eaterRight.physicsBody?.categoryBitMask = 0
+            ariranhaNode.texture = ariranhaAnimation[2]
             return
         }
+    
+        
+        //IR PARA A HOME
+        if home.containsPoint(touchLocation) && pauseButton{
+            println("CLICOU NO HOME")
+            pausePopUp.zPosition = layerBeforeBackground
+            return
+        }
+        
+        //IR PARA O TUTORIAL
+        if tutorial.containsPoint(touchLocation) && pauseButton{
+            println("CLICOU NO TUTORIAL")
+            pausePopUp.zPosition = layerBeforeBackground
+            return
+        }
+        
+        //IR PARA O TUTORIAL
+        if continuar.containsPoint(touchLocation) && pauseButton{
+            println("CLICOU NO CONTINUAR")
+            pausePopUp.zPosition = layerBeforeBackground
+            pauseButton = false
+            pausePopUp.zPosition = layerBeforeBackground
+            continuar.zPosition = layerBeforeBackground
+            home.zPosition = layerBeforeBackground
+            tutorial.zPosition = layerBeforeBackground
+            tutor.zPosition = layerBeforeBackground
+            return
+        }
+     
         
         //        if feedingGame.containsPoint(touchLocation){
         //            var feedingGameScene = FeedingGameScene.unarchiveFromFile("FeedingGameScene") as! FeedingGameScene
         //            view!.presentScene(feedingGameScene)
         //        }
-        
-        
-        
-        
-        
-        
-        
         
         //        if self.childNodeWithName("musicOn")!.containsPoint(touchLocation){
         //            if musicGame {
@@ -329,7 +421,7 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
             (firstBody.categoryBitMask == BottomCategory && secondBody.categoryBitMask == FishCategory){
 //                firstBody.dynamic = false
 //                secondBody.dynamic = false
-                determinesAndDestroyFishInGround(firstBody.node as! SKSpriteNode, objectTwo: secondBody.node as! SKSpriteNode)
+                //determinesAndDestroyFishInGround(firstBody.node as! SKSpriteNode, objectTwo: secondBody.node as! SKSpriteNode)
 //                println("CHAO")
                 return
         }
@@ -392,7 +484,7 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
         bola.physicsBody?.categoryBitMask = FishCategory
         bola.physicsBody?.contactTestBitMask = BottomCategory | EaterCategory
         bola.physicsBody?.collisionBitMask = FishCategory
-        addChild(bola)
+//        addChild(bola)
     }
     
     //EXECUTA A CONTAGEM DOS TIMER
