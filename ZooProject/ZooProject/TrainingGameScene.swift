@@ -43,10 +43,15 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
     var countFishLost = 0;
     
     
-    
+    var pause: SKSpriteNode = SKSpriteNode()
     var musicOn: SKSpriteNode = SKSpriteNode()
     var soundOn: SKSpriteNode = SKSpriteNode()
     var colorBlindOn: SKSpriteNode = SKSpriteNode()
+    
+    
+    var pausePopUp: SKSpriteNode = SKSpriteNode()
+    var pauseButton = false
+   
     
     var soundGame: Bool = Bool()
     var musicGame: Bool = Bool()
@@ -55,6 +60,10 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
     
     let defaults = NSUserDefaults.standardUserDefaults()
     var audioPlayer = AVAudioPlayer()
+    
+    var layerBackground: CGFloat = 0.0
+    var layerBeforeBackground: CGFloat = -1
+    var layerAfterBackground: CGFloat = 1
     
     
     override func didMoveToView(view: SKView) {
@@ -169,11 +178,13 @@ class TrainingGameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
         var touch = touches.first as! UITouch
         var touchLocation = touch.locationInNode(self)
-        
+        var node = self.nodeAtPoint(touchLocation)
         
         if back.containsPoint(touchLocation){
             var enclousureScene = EnclousureScene.unarchiveFromFile("EnclousureScene") as! EnclousureScene
